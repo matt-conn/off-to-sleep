@@ -1,0 +1,135 @@
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Box Model Hack */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/*******************************************
+/* VARIABLES
+/*******************************************/
+:root {
+    --color-main: #198F86;
+    --color-accent-dark: #fff;
+    --color-accent-light: #fff;
+}
+
+/*******************************************
+/* BASE STYLES
+/*******************************************/
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.wrapper {
+    max-width: 1140px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover, 
+a:focus {
+    text-decoration: underline;
+}
+
+.btn {
+    -webkit-appearance: none;
+        -moz-appearance: none;
+            appearance: none;
+    color: #fff;
+    background-color: #2fa0f6;
+    min-width: 120px;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/*******************************************
+/* HEADER
+/*******************************************/
+.site-header {
+    position: relative;
+    background: var(--color-main);
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.site-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+    @media (min-width: 660px) {
+        .site-header-wrapper {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    @media (max-width: 659px) {
+        .site-header-end {
+            padding-right: 4rem;
+        }
+    }
+
+.nav-wrapper {
+    display: flex;
+}
+    @media (min-width: 660px) {
+        .nav-wrapper {
+            
+        }
+    }
+
+    @media (max-width: 659px) {
+        .nav-wrapper {
+
+        }
+    }
+
+.nav-item a {
+    display: block;
+    padding: 1.5rem 1rem;
+}
+
+
+/*******************************************
+/* LAYOUT
+/*******************************************/
+
+/*******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+/*******************************************
+/* MEDIA QUERIES
+/*******************************************/
+@media only screen and (max-width: 480px) {
+    
+}
+
+/* Tablet Styles */
+@media (min-width: 700px) and (max-width: 909px) {
+    
+}
+
+/* Desktop Styles */
+@media (min-width: 910px) {
+    
+}
