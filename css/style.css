@@ -48,11 +48,12 @@ a:focus {
         -moz-appearance: none;
             appearance: none;
     color: #fff;
-    background-color: #2fa0f6;
+    background-color: #309A92;
     min-width: 120px;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     text-align: center;
+    border: 1px solid #72BAB5;
 }
 
 /*******************************************
