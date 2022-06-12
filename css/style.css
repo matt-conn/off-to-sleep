@@ -22,6 +22,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 /*******************************************/
 body {
     font-family: "Montserrat", sans-serif;
+    background: var(--color-main);
 }
 
 .wrapper {
@@ -67,6 +68,11 @@ a:focus {
     font-size: 20px;
 }
 
+.nav-item a {
+    display: block;
+    padding: 1.5rem 1rem;
+}
+
 .site-header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -74,38 +80,48 @@ a:focus {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-    @media (min-width: 660px) {
+    @media (min-width: 735px) {
         .site-header-wrapper {
             padding-top: 0;
             padding-bottom: 0;
         }
     }
 
-    @media (max-width: 659px) {
-        .site-header-end {
-            padding-right: 4rem;
-        }
-    }
-
-.nav-wrapper {
-    display: flex;
+.site-header-wrapper-bottom {
+    display: none;
 }
-    @media (min-width: 660px) {
-        .nav-wrapper {
-            
+
+    @media (min-width: 735px) {
+        .nav-wrapper-top {
+            display: flex;
         }
     }
 
-    @media (max-width: 659px) {
-        .nav-wrapper {
+    @media (max-width: 734px) {
+        .nav-wrapper-top {
+            display: none;
+        }
 
+        .site-header-wrapper-bottom {
+            display: block;
+            padding: 0;
+            margin: 0;
+            border-bottom: #38aea5 1px solid;
+        }
+
+        .nav-wrapper-bottom {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0;
+            margin: 0 2rem;
+        }
+
+        .nav-item a {
+            padding: 0.75rem 0.25rem;
+            font-size: 0.85rem;
         }
     }
-
-.nav-item a {
-    display: block;
-    padding: 1.5rem 1rem;
-}
 
 
 /*******************************************
@@ -115,21 +131,3 @@ a:focus {
 /*******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-
-
-/*******************************************
-/* MEDIA QUERIES
-/*******************************************/
-@media only screen and (max-width: 480px) {
-    
-}
-
-/* Tablet Styles */
-@media (min-width: 700px) and (max-width: 909px) {
-    
-}
-
-/* Desktop Styles */
-@media (min-width: 910px) {
-    
-}
