@@ -22,7 +22,6 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 /*******************************************/
 body {
     font-family: "Montserrat", sans-serif;
-    background: var(--color-main);
 }
 
 .wrapper {
@@ -62,11 +61,12 @@ a:focus {
 .site-header {
     position: relative;
     background: var(--color-main);
+    padding: 15px 0;
 }
 
-.logo {
-    font-weight: bold;
-    font-size: 20px;
+.logo-img {
+    width: 200px;
+    margin-top: 8px;
 }
 
 .nav-item a {
@@ -128,6 +128,16 @@ a:focus {
 /*******************************************
 /* LAYOUT
 /*******************************************/
+
+
+
+/*******************************************
+/* MAIN
+/*******************************************/
+main img {
+    width: 100%;
+}
+
 
 /*******************************************
 /* ADDITIONAL STYLES
