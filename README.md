@@ -1,4 +1,4 @@
-# Lindsay Cowen | Sleep Specialist | Website
+# Lindsay Doyle | Sleep Coach | Website
 
 
 ### Screenshots
