@@ -23,6 +23,8 @@ html {
 
 body {
     font-family: Inter, 'Arial Narrow Bold', sans-serif;
+    color: #2D0610;
+    background: #FEF6F8;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,6 +58,7 @@ img {
 
 a {
     text-decoration: none;
+    color: #FEF6F8;
 }
 
 a:hover, 
@@ -68,7 +71,7 @@ a:focus {
         -moz-appearance: none;
             appearance: none;
     min-width: 120px;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2.5rem;
     border-radius: 5px;
     text-align: center;
 }
@@ -93,6 +96,14 @@ a:focus {
     color: #fff;
     font-size: 1.25rem;
 }
+
+.header-btn:hover,
+.header-btn:focus {
+    text-decoration: none;
+    color: var(--color-main);
+    background: #FEF6F8;
+}
+
     @media (max-width: 445px) {
         .header-btn {
             display: none;
@@ -163,7 +174,6 @@ a:focus {
         display: block;
         padding: 0 1.25rem;
         font-size: 1.5rem;
-        color: #fff;
     }
 
         @media (max-width: 839px) {
@@ -241,6 +251,18 @@ main img {
 }
 
 /*******************************************
+/* MESSAGES
+/*******************************************/
+.section-message {
+    text-align: center;
+}
+.section-message h2 {
+    font-family: Kavoon;
+    font-size: 5rem;
+}
+
+
+/*******************************************
 /* SERVICES
 /*******************************************/
 .services {
@@ -249,10 +271,15 @@ main img {
     justify-content: space-around;
     align-items: center;
 }
+    @media (max-width: 839px) {
+        .services {
+            flex-direction: column;
+        }
+    }
 
 .service-item {
     list-style-type: none;
-    background: #d9d9d9;
+    background: #F4B3C3;
     flex: 1 1 0;
     min-height: 200px;
     margin: 0 1em;
@@ -265,4 +292,18 @@ main img {
 
 .service-item:last-of-type {
     margin-right: 0;
+}
+
+/*******************************************
+/* TESTIMONIALS
+/*******************************************/
+.testimonials {
+    display: flex;
+}
+
+.testimonial {
+    background: #F4B3C3;
+    border-radius: 10px;
+    padding: 1rem 4rem;
+    margin: 2rem 0;
 }
