@@ -71,7 +71,7 @@ a:focus {
         -moz-appearance: none;
             appearance: none;
     min-width: 120px;
-    padding: 0.5rem 2.5rem;
+    padding: 0.75rem 2.5rem;
     border-radius: 5px;
     text-align: center;
 }
@@ -172,14 +172,15 @@ a:focus {
 
     .nav-item a {
         display: block;
+        margin: 0 1rem;
         padding: 0 1.25rem;
         font-size: 1.5rem;
     }
 
         @media (max-width: 839px) {
             .nav-item a {
-                padding: 1rem 0 1.5rem 0;
-                font-size: 1.15rem;
+                padding: 2rem 0 1.5rem 0;
+                font-size: 1.25rem;
             }
 
             .header-btn {
@@ -192,13 +193,22 @@ a:focus {
 /*******************************************/
 .section-wrapper {
     max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    padding: 30px;
 }
+    @media (max-width: 1100px) {
+        .section-wrapper {
+            margin: 0 8em;
+        }
+    }
 
 .section {
     margin-bottom: 6em;
 } 
+
+.section h1 {
+    font-size: 3rem;
+}
 
 /*******************************************
 /* MAIN
@@ -234,17 +244,15 @@ main img {
 .about-start {
     flex: 0.5 1 0;
 }
-    .about-start h1 {
-        font-size: 4rem;
-    }
+
+.about-start h1 {
+    font-size: 5rem;
+}
 
 .about-middle {
     flex: 1 1 0;
     margin: 0 2.5em;
 }
-    .about-middle img {
-        
-    }
 
 .about-end {
     flex: 1 1 0;
@@ -258,40 +266,86 @@ main img {
 }
 .section-message h2 {
     font-family: Kavoon;
-    font-size: 5rem;
+    font-size: 6rem;
 }
 
 
 /*******************************************
 /* SERVICES
 /*******************************************/
-.services {
+.services-grid {
+    display: -webkit-box;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    -webkit-box-align: center;
     align-items: center;
+    text-align: center;
 }
-    @media (max-width: 839px) {
-        .services {
+
+    @media all and (max-width:900px) {
+        .services-grid {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
             flex-direction: column;
         }
     }
 
-.service-item {
-    list-style-type: none;
-    background: #F4B3C3;
-    flex: 1 1 0;
-    min-height: 200px;
-    margin: 0 1em;
-    border-radius: 10px;
+.services-grid h3 {
+    font-size: 1.85rem;
+    margin: 1rem 0 0.6rem;
 }
 
-.service-item:first-of-type {
-    margin-left: 0;
+.services-grid a {
+    display: block;
+    text-decoration: none;
+    margin: 1.25rem 0 0.95rem;
+    font-size: 1.20rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #2D0610;
 }
 
-.service-item:last-of-type {
-    margin-right: 0;
+.services-grid p {
+    margin: 1rem 0;
+    line-height: 1.5;
+}
+
+.service {
+    background: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 6px;
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #e7e7e7;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.service:hover {
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+    border: 2px solid #EE87A0;
+}
+
+.service h3,
+.service .cta {
+    color: #EE87A0;
+}
+
+.service > * {
+    flex: 1 1 100%;
+}
+
+.service .cta {
+    align-self: flex-end;
 }
 
 /*******************************************
