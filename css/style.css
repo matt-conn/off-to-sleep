@@ -10,6 +10,8 @@
 /*******************************************/
 :root {
     --color-main: #E75A7C;
+    --color-background: #FEF6F8;
+    --color-main-text: #2D0610;
     --color-accent-dark: #fff;
     --color-accent-light: #fff;
 }
@@ -223,8 +225,29 @@ main {
         }
     }
 
-main img {
-    width: 100%;
+/* main img {
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+} */
+
+.hero-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(5, 1, 2, 0.65)), url("../images/hero-baby.jpg");
+    min-height: 500px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 40%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    color: #fff;
 }
 
 /*******************************************
