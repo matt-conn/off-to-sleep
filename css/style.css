@@ -241,7 +241,7 @@ main {
 
 .hero-image {
     background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(5, 1, 2, 0.65)), url("../images/hero-baby.jpg");
-    min-height: 650px;
+    min-height: 750px;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
