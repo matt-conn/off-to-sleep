@@ -200,7 +200,13 @@ a:focus {
 }
     @media (max-width: 1100px) {
         .section-wrapper {
-            margin: 0 8em;
+            margin: 0 7em;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .section-wrapper {
+            margin: 0 1em;
         }
     }
 
@@ -235,12 +241,18 @@ main {
 
 .hero-image {
     background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(5, 1, 2, 0.65)), url("../images/hero-baby.jpg");
-    min-height: 500px;
+    min-height: 650px;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+    @media (max-width: 839px) {
+        .hero-image {
+            min-height: 350px;
+        }
+    }
 
 .hero-text {
     position: absolute;
@@ -383,4 +395,23 @@ main {
     border-radius: 10px;
     padding: 1rem 4rem;
     margin: 2rem 0;
+}
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Box Model Hack */
+/* force width to include padding and borders */
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box; /* force width to include padding and borders */
+}
+
+section, article, aside, footer, header, nav {
+    display: block;
+    /* make semantic elements behave like <div> elements in legacy browsers. */
 }
