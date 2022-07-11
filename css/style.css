@@ -30,12 +30,10 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: Inter, 'Arial Narrow Bold', sans-serif;
     font-weight: 800;
 }
 
 p {
-    font-family: Inter, 'Arial Narrow Bold', sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
 }
@@ -87,31 +85,6 @@ a:focus {
     padding: 10px 0;
 }
 
-.logo-img {
-    width: 200px;
-    margin-top: 8px;
-}
-
-.header-btn {
-    background-color: var(--color-main);
-    border: 1.5px solid #fff;
-    color: #fff;
-    font-size: 1.25rem;
-}
-
-.header-btn:hover,
-.header-btn:focus {
-    text-decoration: none;
-    color: var(--color-main);
-    background: #FEF6F8;
-}
-
-    @media (max-width: 445px) {
-        .header-btn {
-            display: none;
-        }
-    }
-
 .site-header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -152,6 +125,31 @@ a:focus {
         .site-header-middle {
             flex-basis: 100%;
             order: 3;
+        }
+    }
+
+.logo-img {
+    width: 200px;
+    margin-top: 8px;
+}
+
+.header-btn {
+    background-color: var(--color-main);
+    border: 1.5px solid #fff;
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+.header-btn:hover,
+.header-btn:focus {
+    text-decoration: none;
+    color: var(--color-main);
+    background: #FEF6F8;
+}
+
+    @media (max-width: 445px) {
+        .header-btn {
+            display: none;
         }
     }
 
@@ -395,23 +393,4 @@ main {
     border-radius: 10px;
     padding: 1rem 4rem;
     margin: 2rem 0;
-}
-
-/* reset */
-* {
-    margin: 0;
-    padding: 0;
-}
-
-/* Box Model Hack */
-/* force width to include padding and borders */
-* {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box; /* force width to include padding and borders */
-}
-
-section, article, aside, footer, header, nav {
-    display: block;
-    /* make semantic elements behave like <div> elements in legacy browsers. */
 }
