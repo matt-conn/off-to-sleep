@@ -10,10 +10,17 @@
 /*******************************************/
 :root {
     --color-main: #E75A7C;
+    --color-main-light: #FAE0E6;
+    --color-main-dark: #931534;
     --color-background: #FEF6F8;
     --color-main-text: #2D0610;
-    --color-accent-dark: #fff;
-    --color-accent-light: #fff;
+    --color-accent-green-dark: #82C44C;
+    --color-accent-green: #82C44C;
+    --color-accent-green-light: #D1EABE;
+    --color-accent-green-dark: #38581D;
+    --color-accent-blue: #5A9EE7;
+    --color-accent-blue-light: #E0EDFA;
+    --color-accent-blue-dark: #155293;
 }
 
 /*******************************************
@@ -25,8 +32,8 @@ html {
 
 body {
     font-family: Inter, 'Arial Narrow Bold', sans-serif;
-    color: #2D0610;
-    background: #FEF6F8;
+    color: var(--color-main-text);
+    background: var(--color-background);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -58,7 +65,7 @@ img {
 
 a {
     text-decoration: none;
-    color: #FEF6F8;
+    color: var(--color-background);
 }
 
 a:hover, 
@@ -82,49 +89,36 @@ a:focus {
 .site-header {
     position: relative;
     background: var(--color-main);
-    padding: 10px 0;
+    padding: 2rem 1.5rem;
 }
 
 .site-header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
 }
-    @media (min-width: 840px) {
-        .site-header-wrapper {
-            padding-top: 0;
-            padding-bottom: 0;
-            padding: 0 2rem;
-        }
-    }
 
     @media (max-width: 839px) {
-        .site-header-wrapper {
-            padding-top: 0;
+        .site-header {
+            padding-top: 0.75rem;
             padding-bottom: 0;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
         }
-    }
 
-    @media (max-width: 839px) {
         .site-header-wrapper {
             flex-wrap: wrap;
-        }
-
-        .site-header {
-            padding-top: 0;
-            padding-bottom: 0;
-        }
-
-        .site-header-end {
-            justify-self: self-end;
         }
 
         /* nav section */
         .site-header-middle {
             flex-basis: 100%;
             order: 3;
+        }
+
+        /* button cta */
+        .site-header-end {
+            justify-self: self-end;
         }
     }
 
@@ -144,7 +138,7 @@ a:focus {
 .header-btn:focus {
     text-decoration: none;
     color: var(--color-main);
-    background: #FEF6F8;
+    background: var(--color-background);
 }
 
     @media (max-width: 445px) {
@@ -229,14 +223,6 @@ main {
         }
     }
 
-/* main img {
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-} */
-
 .hero-image {
     background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(5, 1, 2, 0.65)), url("../images/hero-baby.jpg");
     min-height: 750px;
@@ -267,29 +253,86 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
-    @media (max-width: 839px) {
-        .section-about {
-            flex-direction: column;
-        }
-    }
 
 .about-start {
-    flex: 0.5 1 0;
+    flex: 0.75 1 0;
+    margin-right: 2rem;
+}
+
+.about-middle img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+
+
+.about-end {
+    flex: 1 1 0;
 }
 
 .about-start h1 {
     font-size: 5rem;
 }
 
-.about-middle {
-    flex: 1 1 0;
-    margin: 0 2.5em;
-}
-
 .about-end {
-    flex: 1 1 0;
+    margin-left: 2rem;
 }
+    @media (max-width: 958px) {
+        .section-about {
+            flex-wrap: wrap;
+        }
+
+        .about-start {
+            flex-basis: 45%;
+            text-align: center;
+            margin: 0;
+        }
+
+        .about-middle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 0 0 0;
+            flex-basis: 45%;
+        }
+
+        .about-middle img {
+            width: 75%;
+        }
+        
+        .about-end {
+            flex-basis: 100%;
+            text-align: center;
+            margin: 0;
+        }
+    }
+
+    @media (max-width: 720px) {
+        .section-about {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .about-start {
+            flex-basis: 100%;
+            order: 0;
+            text-align: center;
+        }
+
+        .about-middle {
+            order: 2;
+            flex-basis: 85%
+        }
+        
+        .about-end {
+            order: 3;
+            text-align: center;
+            margin: 0;
+        }
+    }
 
 /*******************************************
 /* MESSAGES
@@ -337,7 +380,7 @@ main {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #2D0610;
+    color: var(--color-main-text);
 }
 
 .services-grid p {
