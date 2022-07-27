@@ -12,15 +12,30 @@
     --color-main: #E75A7C;
     --color-main-light: #FAE0E6;
     --color-main-dark: #931534;
+
     --color-background: #FEF6F8;
+    
     --color-main-text: #2D0610;
-    --color-accent-green-dark: #82C44C;
+    
     --color-accent-green: #82C44C;
     --color-accent-green-light: #D1EABE;
     --color-accent-green-dark: #38581D;
+    
     --color-accent-blue: #5A9EE7;
     --color-accent-blue-light: #E0EDFA;
     --color-accent-blue-dark: #155293;
+}
+
+/*******************************************
+/* FONTS
+/*******************************************/
+@font-face {
+    font-family: 'Chelsy';
+    src: url('../fonts/chelsy/Chelsy.eot');
+    src: url('../fonts/chelsy/Chelsy.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/chelsy/Chelsy.woff2') format('woff2'),
+         url('../fonts/chelsy/Chelsy.woff') format('woff'),
+         url('../fonts/chelsy/Chelsy.ttf')  format('truetype');
 }
 
 /*******************************************
@@ -167,10 +182,24 @@ a:focus {
 
     .nav-item a {
         display: block;
-        margin: 0 1rem;
-        padding: 0 1.25rem;
+        margin: 0 1.5rem;
+        padding: 0 3rem;
         font-size: 1.5rem;
     }
+
+    .nav-item a:first-of-type {
+        margin-left: 0;
+    }
+    
+    .nav-item a:last-of-type {
+        margin-right: 0;
+    }
+        @media (max-width: 870px) {
+            .nav-item a {
+                padding: 0 1.5rem;
+                font-size: 1.45rem;
+            }
+        }
 
         @media (max-width: 839px) {
             .nav-item a {
@@ -209,6 +238,7 @@ main, .section-wrapper {
 
 .section h1 {
     font-size: 3rem;
+    text-align: center;
 }
 
 /*******************************************
@@ -256,6 +286,7 @@ main {
             flex-direction: column;
             align-items: center;
             position: relative;
+            padding-top: 3rem;
         }
 
         .section-hero > * {
@@ -265,19 +296,25 @@ main {
         .section-hero-start {
             display: flex;
             flex-direction: column;
-            order: 1;
+            /* order: 1; */
+        }
+
+        .section-hero-start p {
+            padding-top: 2rem;
         }
 
         .hero-text {
-            position: absolute;
+            /* position: absolute;
             top: 2rem;
             left: 0;
-            right: 0;
+            right: 0; */
+            width: 70%;
             margin: 0 auto;
         }
 
         .hero-img {
-            padding-top: calc(32% - 10px);
+            display: none;
+            /* padding-top: calc(32% - 10px); */
         }
     }
 
@@ -299,99 +336,122 @@ main {
 /* ABOUT
 /*******************************************/
 .section-about {
+    margin: 0 auto;
+}
+
+/* BIO */
+.about-bio {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
 }
 
-.about-start {
-    flex: 0.75 1 0;
-    margin-right: 2rem;
+.about-bio h1 {
+    font-size: 6rem;
+    text-align: left;
+    margin-right: 3rem;
 }
 
-.about-middle img {
-    max-height: 100%;
-    min-width: 100%;
+.about-bio p {
+    line-height: 3.25rem;
+}
+
+    @media screen and (max-width: 770px) {
+        .about-bio {
+            flex-direction: column;
+        }
+
+        .about-bio h1, .about-bio p {
+            text-align: center;
+            margin: 0;
+        }
+
+        .about-bio h1 {
+            margin-bottom: 1rem;
+        }
+
+        .about-grid, .about-bio p {
+            margin-bottom: 5rem;
+        }
+    }
+
+/* GRID */
+.grid-img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    border: 2px solid #e7e7e7;
 }
 
-.about-end {
-    flex: 1 1 0;
+.about-grid {  
+    display: grid;
+    grid-auto-columns: 1fr; 
+    grid-template-columns: 60% 35%; 
+    grid-template-rows: auto; 
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "main subgrid";
+}
+  
+.main-img { grid-area: main; }
+  
+.about-subgrid {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    gap: 20px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "one two"
+        "three three";
+    grid-area: subgrid;
 }
 
-.about-start h1 {
-    font-size: 5rem;
-}
+.subgrid-img-one { grid-area: one; }
 
-.about-end {
-    margin-left: 2rem;
-}
-    @media (max-width: 958px) {
-        .section-about {
-            flex-wrap: wrap;
-        }
+.subgrid-img-two { grid-area: two; }
 
-        .about-start {
-            flex-basis: 45%;
-            text-align: center;
-            margin: 0;
+.subgrid-img-three { grid-area: three; }
+  
+    /* grid on tablet / mobile */
+    @media screen and (max-width: 770px) {
+        .about-grid {
+            grid-auto-columns: 1fr; 
+            grid-template-columns: 1fr; 
+            grid-template-areas:
+                "main"
+                "subgrid";
         }
 
-        .about-middle {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex: 0 0 0;
-            flex-basis: 45%;
+        .about-subgrid {  
+            display: grid;
+            grid-template-columns: .5fr .5fr;
+            grid-template-rows: 1fr;
+            gap: 20px 20px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "one two"
         }
 
-        .about-middle img {
-            width: 75%;
-        }
-        
-        .about-end {
-            flex-basis: 100%;
-            text-align: center;
-            margin: 0;
-        }
+        .subgrid-img-three { display: none; }
     }
-
-    @media (max-width: 720px) {
-        .section-about {
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .about-start {
-            flex-basis: 100%;
-            order: 0;
-            text-align: center;
-        }
-
-        .about-middle {
-            order: 2;
-            flex-basis: 85%
-        }
-        
-        .about-end {
-            order: 3;
-            text-align: center;
-            margin: 0;
-        }
-    }
-
+  
 /*******************************************
 /* MESSAGES
 /*******************************************/
 .section-message {
     text-align: center;
 }
-.section-message h2 {
-    font-family: Kavoon;
-    font-size: 6rem;
-}
 
+.section-message h2 {
+    font-family: 'Chelsy';
+    font-size: 6rem;
+    margin-bottom: 2rem;
+    line-height: 5rem;
+}
 
 /*******************************************
 /* SERVICES
@@ -402,6 +462,7 @@ main {
     -webkit-box-align: center;
     align-items: center;
     text-align: center;
+    flex-wrap: wrap;
 }
 
     @media all and (max-width:900px) {
@@ -469,6 +530,10 @@ main {
 
 .service .cta {
     align-self: flex-end;
+}
+
+.service-ama {
+    flex-basis: 100%;
 }
 
 /*******************************************
