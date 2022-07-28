@@ -2,7 +2,7 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /*******************************************
@@ -447,7 +447,7 @@ main {
 }
 
 .section-message h2 {
-    font-family: 'Chelsy';
+    /* font-family: 'Chelsy'; */
     font-size: 6rem;
     margin-bottom: 2rem;
     line-height: 5rem;
@@ -548,4 +548,12 @@ main {
     border-radius: 10px;
     padding: 1rem 4rem;
     margin: 2rem 0;
+}
+
+/*******************************************
+/* FOOTER
+/*******************************************/
+.byline {
+    font-size: 1rem;
+    text-align: center;
 }
