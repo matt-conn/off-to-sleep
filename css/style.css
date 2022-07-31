@@ -115,7 +115,7 @@ a:focus {
     align-items: center;
 }
 
-    @media (max-width: 839px) {
+    @media screen and (max-width: 839px) {
         .site-header {
             padding-top: 0.75rem;
             padding-bottom: 0;
@@ -158,7 +158,7 @@ a:focus {
     background: var(--color-background);
 }
 
-    @media (max-width: 445px) {
+    @media screen and (max-width: 445px) {
         .header-btn {
             display: none;
         }
@@ -195,14 +195,14 @@ a:focus {
     .nav-item a:last-of-type {
         margin-right: 0;
     }
-        @media (max-width: 870px) {
+        @media screen and (max-width: 870px) {
             .nav-item a {
                 padding: 0 1.5rem;
                 font-size: 1.45rem;
             }
         }
 
-        @media (max-width: 839px) {
+        @media screen and (max-width: 839px) {
             .nav-item a {
                 padding: 2rem 0 1.5rem 0;
                 font-size: 1.25rem;
@@ -221,7 +221,7 @@ main, .section-wrapper, .footer-wrapper {
     margin: 0 auto;
     padding: 0 30px;
 }
-    @media (max-width: 1100px) {
+    @media screen and (max-width: 1100px) {
         main {
             margin: 0 2rem;
         }
@@ -253,7 +253,7 @@ main {
     display: flex;
 }
  
-    @media (max-width: 839px) {
+    @media screen and (max-width: 839px) {
         main {
             margin-bottom: 3.5em;
         }
@@ -614,6 +614,16 @@ footer {
     padding-left: 50px;
 }
 
+    @media screen and (max-width: 480px) {
+        footer {
+            padding-left: 0;
+        }
+
+        #footer-logo {
+            padding: 6rem 0 1rem 0;
+        }
+    }
+
 .footer-grid {
     display: grid;
     grid-template-columns: 0.5fr 2fr;
@@ -670,13 +680,15 @@ footer {
 }
 
 .social-icon {
-    width: 2.5 rem;
+    width: 2.5rem;
     height: 2.5rem;
     fill: var(--color-main-light);
-    margin-right: 2rem;
-    margin-bottom: 4rem;
 }
 
+
+.footer-social {
+    margin-bottom: 3rem;
+}
 .social-icon:hover {
     fill: var(--color-main);
 }
@@ -748,6 +760,10 @@ form {
             }
 
     @media screen and (max-width: 480px) {
+        form {
+            padding: 0;
+        }
+        
         form > .fields {
             width: calc(100% + 3em);
             margin: -1.5em 0 2em -1.5em;
