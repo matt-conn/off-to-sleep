@@ -169,43 +169,11 @@
                     </div>
 
                     
-                    <a href="#" class="more-testimonials">Click for More Success Stories!</a>
+                    <a href="#" class="more-testimonials">More Success Stories!</a>
                     
                 </div>
             </section>
         </div>  <!-- end section-wrapper div -->
-
-        <!-- <footer class="footer-grid">
-            <div class="footer-info">
-                <h2>COMPANY</h2>
-                <p>Off to Zzzz Sleep Consulting is the premier virtual sleep coaching etc etc etc</p>
-
-                <ul>
-                   <li><a href="#">About Lindsay</a></li> 
-                   <li><a href="#">Sleep Programs</a></li> 
-                   <li><a href="#">Sucess Stories</a></li> 
-                </ul>
-            </div>
-            
-            <div class="footer-form">
-                <form action="" id="contact-form">
-                    <input type="text" id="name" placeholder="Name">
-                    <input type="email" id="email" placeholer="Email">
-                    <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
-                    <input type="submit">
-                </form>
-            </div>
-
-            <div class="footer-bottom">
-                <div class="creator">
-                    <h3>MATT CONN</h3>
-                </div>
-
-                <div class="social">
-                    <p>INSTAGRAM</p>
-                </div>
-            </div>
-        </footer> -->
 
         <footer>
             <div class="footer-wrapper">
@@ -223,17 +191,38 @@
                     </div>
                     
                     <div class="footer-form">
-                        <form action="" id="contact-form">
-                            <input type="text" id="name" placeholder="Name">
-                            <input type="email" id="email" placeholer="Email">
-                            <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
-                            <input type="submit">
+                        <form action="contact-main" method="POST" netlify>
+                            <div class="fields">
+                                <div class="field full">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" placeholder="Name" required>
+                                </div>
+
+                                <div class="field half">
+                                    <label for="email">Email</label>
+                                    <input type="text" name="email" id="email" placeholder="Email" required>
+                                </div>
+
+                                <div class="field half">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" name="phone" id="phone" placeholder="xxx-xxx-xxxx">
+                                </div>
+
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" rows="5" placeholder="Your message here."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="actions">
+                                <input type="submit" class="btn submit" value="Send Message">
+                            </div>
                         </form>
                     </div>
 
                     <div class="footer-bottom">
                         <div class="creator">
-                            <h3>MATT CONN</h3>
+                            <p>Built by <a href="https://mattconnoll.dev">Matt Connolly</a> &copy; 2022 | All rights reserved.</p>
                         </div>
 
                         <div class="social">
