@@ -631,6 +631,18 @@ footer {
     align-items: center;
 }
 
+.social-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: white;
+}
+
+.services-footer li {
+    list-style-type: none;
+    margin-bottom: 0.75rem;
+    
+}
+
 /*******************************************
 /* FORM
 /*******************************************/
