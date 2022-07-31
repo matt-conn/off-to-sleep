@@ -53,6 +53,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 800;
+    margin: 0;
 }
 
 p {
@@ -221,8 +222,12 @@ main, .section-wrapper, .footer-wrapper {
     padding: 0 30px;
 }
     @media (max-width: 1100px) {
+        main {
+            margin: 0 2rem;
+        }
+
         .section-wrapper {
-            margin: 0 7em;
+            margin: 0 5rem;
         }
     }
 
@@ -233,7 +238,7 @@ main, .section-wrapper, .footer-wrapper {
     }
 
 .section {
-    margin-bottom: 6em;
+    margin-bottom: 3.5rem;
 } 
 
 .section h1 {
@@ -296,7 +301,6 @@ main {
         .section-hero-start {
             display: flex;
             flex-direction: column;
-            /* order: 1; */
         }
 
         .section-hero-start p {
@@ -304,17 +308,12 @@ main {
         }
 
         .hero-text {
-            /* position: absolute;
-            top: 2rem;
-            left: 0;
-            right: 0; */
             width: 70%;
             margin: 0 auto;
         }
 
         .hero-img {
             display: none;
-            /* padding-top: calc(32% - 10px); */
         }
     }
 
@@ -344,6 +343,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
 }
 
 .about-bio h1 {
@@ -436,19 +436,20 @@ main {
 
         .subgrid-img-three { display: none; }
     }
-  
+
 /*******************************************
 /* MESSAGES
 /*******************************************/
 .section-message {
     text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 8rem;
 }
 
 .section-message h2 {
-    /* font-family: 'Chelsy'; */
     font-size: 6rem;
+    color: var(--color-main-dark);
     margin-bottom: 2rem;
-    line-height: 5rem;
 }
 
 /*******************************************
@@ -595,6 +596,7 @@ main {
     text-align: center;
     flex-basis: 100%;
     color: var(--color-main-text);
+    margin-bottom: 6rem;
 }
 
 .more-testimonials:hover {
@@ -608,8 +610,10 @@ main {
 footer {
     background: #041615;
     color: white;
-    padding-top: 3rem;
+    padding-top: 5rem;
+    padding-left: 50px;
 }
+
 .footer-grid {
     display: grid;
     grid-template-columns: 0.5fr 2fr;
@@ -621,26 +625,76 @@ footer {
         "bottom bottom";
 }
 
+    /* grid on tablet / mobile */
+    @media screen and (max-width: 770px) {
+        .footer-grid {
+            grid-template-columns: auto; 
+            grid-template-areas:
+                "form"
+                "info"
+                "bottom";
+        }
+
+        .footer-info {
+            text-align: center;
+        }
+
+        .footer-info img {
+            margin: 0 auto;
+            width: 200px;
+        }
+    }
+
 .footer-info { grid-area: info; }
 .footer-form { grid-area: form; }
 .footer-bottom { grid-area: bottom; }  
 
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+    font-size: 1.25rem;
+    color: #4d5252;
+}
+
+.footer-info p {
+    font-size: 1.35rem;
+    line-height: 1.75rem;
+}
+
+.footer-info p:last-of-type {
+    margin-bottom: 4rem;
 }
 
 .social-icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    fill: white;
+    width: 2.5 rem;
+    height: 2.5rem;
+    fill: var(--color-main-light);
+    margin-right: 2rem;
+    margin-bottom: 4rem;
+}
+
+.social-icon:hover {
+    fill: var(--color-main);
+}
+
+.services-footer ul {
+    margin: 0;
 }
 
 .services-footer li {
     list-style-type: none;
-    margin-bottom: 0.75rem;
-    
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.services-footer li a:hover,
+.services-footer li a:focus {
+    color: var(--color-main);
+    text-decoration: none;
 }
 
 /*******************************************
@@ -648,9 +702,17 @@ footer {
 /*******************************************/
 form {
     margin: 0 0 2em 0;
-    padding: 0 50px;
+    padding: 0 50px 0 50px;
     font-size: 1.2rem;
 }
+    form h1 {
+        margin-bottom: 4rem;    
+    }
+
+    .field {
+        margin-bottom: 2rem;
+    }
+
     form > :last-child {
         margin-bottom: 0;
     }
@@ -698,6 +760,10 @@ form {
                     width: calc(100% - 1.5em);
                 }
     }
+
+form h1 {
+    margin-top: 0;
+}
 
 label {
     color: var (--color-main-light);
@@ -762,3 +828,20 @@ textarea {
     body.is-ie textarea {
         min-height: 10em;
     }
+
+.submit-btn {
+    background-color: var(--color-main);
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 4rem;
+    width: 100%;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-main);
+    background: var(--color-main-light);
+}
