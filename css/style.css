@@ -442,8 +442,8 @@ main {
 /*******************************************/
 .section-message {
     text-align: center;
-    margin-top: 8rem;
-    margin-bottom: 8rem;
+    margin-top: 12rem;
+    margin-bottom: 12rem;
 }
 
 .section-message h2 {
