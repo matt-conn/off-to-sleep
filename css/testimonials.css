@@ -5,6 +5,13 @@ main {
     margin-top: 8rem;
 }
 
+    @media screen and (max-width: 770px) {
+        main {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
 #success h1 {
     font-size: 4rem;
     font-weight: 900;
