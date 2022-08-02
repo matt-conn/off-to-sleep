@@ -1,0 +1,34 @@
+/*******************************************
+/* TESTIMONIALS
+/*******************************************/
+main {
+    margin-top: 8rem;
+}
+
+#success h1 {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
+.testimonial-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 10px;
+}
+
+    @media screen and (max-width: 770px) {
+        .testimonial-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+.testimonial h2,
+.testimonial {
+    text-align: center;
+}
+
+.testimonial:last-of-type {
+    margin-bottom: 8rem;
+    grid-column: 1 / 3;
+}
