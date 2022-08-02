@@ -216,7 +216,9 @@ a:focus {
 /*******************************************
 /* LAYOUT
 /*******************************************/
-main, .section-wrapper, .footer-wrapper {
+main, 
+.section-wrapper, 
+.footer-wrapper {
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 30px;
@@ -227,11 +229,11 @@ main, .section-wrapper, .footer-wrapper {
         }
 
         .section-wrapper {
-            margin: 0 5rem;
+            margin: 0 4rem;
         }
     }
 
-    @media only screen and (max-width: 480px) {
+    @media screen and (max-width: 480px) {
         .section-wrapper {
             margin: 0 1em;
         }
@@ -450,11 +452,27 @@ main {
     font-size: 6rem;
     color: var(--color-main-dark);
     margin-bottom: 2rem;
+    font-weight: 900;
 }
+
+.section-message p {
+    font-size: 1.85rem;
+}
+
+    @media screen and (max-width: 839px) {
+        .section-message h2 {
+            font-size: 4.5rem;
+        }
+    }
 
 /*******************************************
 /* SERVICES
 /*******************************************/
+.section-services p {
+    text-align: center;
+    padding: 0 4rem;
+}
+
 .services-grid {
     display: -webkit-box;
     display: flex;
@@ -558,12 +576,9 @@ main {
     background: radial-gradient(#fbc1cc, #fa99b2); */
 }
 
-.testimonial .pic {
-    width: 100%;
-    flex-basis: 50%;
-    object-fit: cover;
-    align-self: center;
-    margin-left: 20px;
+.section-testimonials > p {
+    text-align: center;
+    padding: 0 4rem;
 }
 
 .testimonial:hover {
@@ -619,9 +634,9 @@ footer {
             padding-left: 0;
         }
 
-        #footer-logo {
+        /* #footer-logo {
             padding: 6rem 0 1rem 0;
-        }
+        } */
     }
 
 .footer-grid {
@@ -637,6 +652,19 @@ footer {
 
     /* grid on tablet / mobile */
     @media screen and (max-width: 770px) {
+        footer {
+            padding-left: 0;
+        }
+
+        #footer-logo {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-info > p {
+            padding: 0 6rem;
+        }
+
         .footer-grid {
             grid-template-columns: auto; 
             grid-template-areas:
@@ -679,12 +707,15 @@ footer {
     margin-bottom: 4rem;
 }
 
+.social-link:first-of-type {
+    margin-right: 1.5rem;
+}
+
 .social-icon {
     width: 2.5rem;
     height: 2.5rem;
     fill: var(--color-main-light);
 }
-
 
 .footer-social {
     margin-bottom: 3rem;
