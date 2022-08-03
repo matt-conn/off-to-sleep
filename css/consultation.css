@@ -19,5 +19,10 @@ main {
 
 .section-consultation p:last-of-type,
 .section-consultation form {
-    margin-bottom: 8rem;
+    margin-bottom: 6rem;
 }
+
+.section-consultation form {
+    background: #FAE0E6;
+    padding: 6rem;
+    border-radius: 10px;
