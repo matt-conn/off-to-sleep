@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Off to Sleep | Lindsay Doyle | Sleep Consultant</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="author" content="Matt Connolly">
+        <meta name="description" content="Lindsay Doyle - Certified Sleep Sleep Coach - Off to Sleep">
+
+        <!--
+        <meta property="og:title" content="Your Page Title">
+        <meta property="og:description" content="Brief description">
+        <meta property="og:image" content="/some-image.png">
+        <meta property="og:url" content="/this-page.html">
+        <meta property="og:site_name" content="Your Site Name">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:image:alt" content="image description">
+        -->
+        <!-- `og` stands for Open Graph, which is a protocol for how your website appears when linked to from another site. -->
+        <!-- `twitter` is similar to Open Graph, but specific to Twitter. There are multiple card types you can choose from. -->
+        <!-- inspiration: https://joshwcomeau.com/snippets/html/html-skeleton -->
+
+        <!-- fonts.bunny-->
+        <!-- <link href="https://fonts.bunny.net/css?family=Inter:400,800,900,200" rel="stylesheet" /> -->
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800;900" rel="stylesheet">
+
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/consultation.css">
+
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    </head>
+
+    <body>
+        <header class="site-header">
+            <div class="wrapper site-header-wrapper">
+                <div class="site-header-start">
+                    <a href="index.html" class="logo"><img src="images/off-to-sleep-logo-name-white.png" alt="" class="logo-img"></a>
+                </div>
+
+                <div class="site-header-middle">
+                    <nav class="main">
+                        <ul class="nav-wrapper">
+                            <li class="nav-item"><a href="index.html#about">Meet Lindsay</a></li>
+                            <li class="nav-item"><a href="#">Sleep Programs</a></li>
+                            <li class="nav-item"><a href="sleepsuccess.html">Success Stories</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="site-header-end">
+                    <a href="consultation.html" class="btn header-btn">Free Consultation</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="section section-consultation">
+                <form action="contact-main" method="POST" netlify>
+                    <h1>Free <em>Off to Sleep</em> Consultation</h1>
+
+                    <p>This will be a great area for keywords that are associated with your field! This will help with Google search, SEO, etc...</p>
+
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod alias sint harum repellendus magni maiores nostrum suscipit aut consectetur dolores vero commodi temporibus</p>
+
+                    <div class="fields">
+                        <div class="field full">
+                            <label for="name">Name (required)</label>
+                            <input type="text" name="name" id="name" placeholder="Name" required>
+                        </div>
+
+                        <div class="field half">
+                            <label for="email">Email (required)</label>
+                            <input type="text" name="email" id="email" placeholder="Email" required>
+                        </div>
+
+                        <div class="field half">
+                            <label for="phone">Phone</label>
+                            <input type="text" name="phone" id="phone" placeholder="xxx-xxx-xxxx">
+                        </div>
+
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="5" placeholder="Your message here."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <input type="submit" class="btn submit-btn" value="Send Message">
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <div class="wrapper footer-wrapper">
+                <div class="footer-grid">
+                    <div class="footer-info">
+                        <a href="index.html"><img src="images/off-to-sleep-logo-name-white.png" alt="" id="footer-logo"></a>
+                        
+                        <p>Off to Sleep is the premier virtual sleep coaching for prenatal, newborns, and toddlers.</p>
+                            
+                        <p>Lindsay has answers for all sleep problems including neque odio pellentesque magnaaliquam metus, id pellentesque magna arcu in urna.</p>
+
+                        <div class="footer-social">
+                            <a href="#facebook" class="social-link">
+                                <svg class="social-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Facebook icon</title><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
+                            </a>
+
+                            <a href="#instagram" class="social-link">
+                                <svg class="social-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Instagram icon</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+                            </a>
+                        </div>
+
+                        <h2><a href="index.html">Lindsay Doyle | Certified Sleep Consultant</a></h2>
+                        <ul class="services-footer">
+                            <li><a href="#">About Lindsay</a></li> 
+                            <li><a href="#">Sleep Programs</a></li> 
+                            <li><a href="#">Success Stories</a></li> 
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-form">
+                        <form action="contact-main" method="POST" netlify>
+                            <h1>Get in Touch</h1>
+                            <div class="fields">
+                                <div class="field full">
+                                    <label for="name">Name (required)</label>
+                                    <input type="text" name="name" id="name" placeholder="Name" required>
+                                </div>
+
+                                <div class="field half">
+                                    <label for="email">Email (required)</label>
+                                    <input type="text" name="email" id="email" placeholder="Email" required>
+                                </div>
+
+                                <div class="field half">
+                                    <label for="phone">Phone</label>
+                                    <input type="text" name="phone" id="phone" placeholder="xxx-xxx-xxxx">
+                                </div>
+
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" rows="5" placeholder="Your message here."></textarea>
+                                </div>
+                            </div>
+
+                            <div class="actions">
+                                <input type="submit" class="btn submit-btn" value="Send Message">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="footer-bottom">
+                        <div class="creator">
+                            <p>Built by <a href="https://mattconnolly.dev">Matt Connolly</a> &copy; 2022 | All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script type="text/javascript" src="js/main.js"></script>
+    </body>
+</html>
