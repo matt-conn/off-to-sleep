@@ -229,7 +229,7 @@ main,
         }
 
         .section-wrapper {
-            margin: 0 4rem;
+            margin: 0 2rem;
         }
     }
 
@@ -497,7 +497,8 @@ main {
     margin: 1rem 0 0.6rem;
 }
 
-.services-grid a {
+.services-grid a,
+.services-grid .price {
     display: block;
     text-decoration: none;
     margin: 1.25rem 0 0.95rem;
@@ -537,8 +538,13 @@ main {
 }
 
 .service h3,
-.service .cta {
+.service .cta,
+.service .price {
     color: #EE87A0;
+}
+
+.service .price {
+    font-size: 1.75rem;
 }
 
 .service > * {
@@ -551,6 +557,24 @@ main {
 
 .service-ama {
     flex-basis: 100%;
+}
+
+#program-services .services-grid {
+    flex-direction: column;
+}
+
+#program-services .service {
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+#program-main {
+    margin-top: 8rem;
+}
+
+#program-main h1 {
+    font-size: 4rem;
+    font-weight: 900;
 }
 
 /*******************************************

@@ -23,8 +23,15 @@
         <!-- `twitter` is similar to Open Graph, but specific to Twitter. There are multiple card types you can choose from. -->
         <!-- inspiration: https://joshwcomeau.com/snippets/html/html-skeleton -->
 
-        <!-- fonts.bunny-->
-        <!-- <link href="https://fonts.bunny.net/css?family=Inter:400,800,900,200" rel="stylesheet" /> -->
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="images/favicon/site.webmanifest">
+        <meta name="apple-mobile-web-app-title" content="Off To Sleep">
+        <meta name="application-name" content="Off To Sleep">
+        <meta name="msapplication-TileColor" content="#ee87a0">
+        <meta name="theme-color" content="#ee87a0">
 
         <!-- google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -35,15 +42,13 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/programs.css">
-
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     </head>
 
     <body>
         <header class="site-header">
             <div class="wrapper site-header-wrapper">
                 <div class="site-header-start">
-                    <a href="index.html" class="logo"><img src="images/off-to-sleep-logo-name-white.png" alt="" class="logo-img"></a>
+                    <a href="index.html" class="logo"><img src="images/off-to-sleep-logo-name-white.svg" alt="" class="logo-img"></a>
                 </div>
 
                 <div class="site-header-middle">
@@ -51,7 +56,7 @@
                         <ul class="nav-wrapper">
                             <li class="nav-item"><a href="index.html#about">Meet Lindsay</a></li>
                             <li class="nav-item"><a href="#">Sleep Programs</a></li>
-                            <li class="nav-item"><a href="sleepsuccess.html">Success Stories</a></li>
+                            <li class="nav-item"><a href="sleep-success.html">Success Stories</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -63,7 +68,7 @@
         </header>
 
         <main>
-            <section class="section section-testimonials" id="success">
+            <section class="section section-services" id="program-main">
                 <h1>Sleep Programs & Coaching Services</h1>
 
                 <p>This will be a great area for keywords that are associated with your field! This will help with Google search, SEO, and people finding you online! Example from Snooze Fest below:</p>
@@ -72,11 +77,55 @@
             </section>
         </main>
 
+        <section class="section section-wrapper" id="program-services">
+            <div class="services-grid">
+                <div class="service service-ama">
+                    <h3>Ask Me Anything</h3>
+                    
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit sed, ipsa quam explicabo velit at, recusandae nemo impedit laudantium perferendis esse temporibus maxime inventore a fugiat enim ex! Velit, quam?</p>
+
+                    <span class="price">$75</span>
+                </div>
+
+                <div class="service service-one">
+                    <h3>Newborn Consultation</h3>
+                    
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit sed, ipsa quam explicabo velit at, recusandae nemo impedit laudantium perferendis esse temporibus maxime inventore a fugiat enim ex! Velit, quam?</p>
+
+                    <span class="price">$150</span>
+                </div>
+
+                <div class="service service-two">
+                    <h3>1-Week Program</h3>
+                    
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit sed, ipsa quam explicabo velit at, recusandae nemo impedit laudantium perferendis esse temporibus maxime inventore a fugiat enim ex! Velit, quam?</p>
+
+                    <span class="price">$650</span>
+                </div>
+
+                <div class="service service-three">
+                    <h3>2-Week Program</h3>
+                    
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit sed, ipsa quam explicabo velit at, recusandae nemo impedit laudantium perferendis esse temporibus maxime inventore a fugiat enim ex! Velit, quam?</p>
+
+                    <span class="price">$975</span>
+                </div>
+            </div>
+        </section>
+
         <footer id="footer">
             <div class="wrapper footer-wrapper">
                 <div class="footer-grid">
                     <div class="footer-info">
-                        <a href="index.html"><img src="images/off-to-sleep-logo-name-white.png" alt="" id="footer-logo"></a>
+                        <a href="index.html"><img src="images/off-to-sleep-logo-name-white.svg" alt="" id="footer-logo"></a>
                         
                         <p>Off to Sleep is the premier virtual sleep coaching for prenatal, newborns, and toddlers.</p>
                             
@@ -94,9 +143,9 @@
 
                         <h2><a href="index.html">Lindsay Doyle | Certified Sleep Consultant</a></h2>
                         <ul class="services-footer">
-                            <li><a href="#">About Lindsay</a></li> 
-                            <li><a href="#">Sleep Programs</a></li> 
-                            <li><a href="#">Success Stories</a></li> 
+                            <li><a href="index.html#about">About Lindsay</a></li> 
+                            <li><a href="programs.html">Sleep Programs</a></li> 
+                            <li><a href="sleep-success.html">Success Stories</a></li> 
                         </ul>
                     </div>
                     
