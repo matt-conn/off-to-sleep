@@ -329,7 +329,7 @@ main {
 /* ABOUT
 /*******************************************/
 .section-about {
-    margin: 0 auto;
+    margin: 5rem auto;
 }
 
 /* BIO */
@@ -487,6 +487,7 @@ main {
 .services-grid h3 {
     font-size: 1.85rem;
     margin: 1rem 0 0.6rem;
+    color: var(--color-main-text);
 }
 
 .services-grid a,
@@ -529,10 +530,9 @@ main {
     border: 2px solid #EE87A0;
 }
 
-.service h3,
 .service .cta,
 .service .price {
-    color: #EE87A0;
+    color: var(--color-main);
 }
 
 .service .price {
