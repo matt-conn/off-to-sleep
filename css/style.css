@@ -52,7 +52,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 800;
+    font-weight: 900;
     margin: 0;
 }
 
@@ -559,23 +559,31 @@ main {
     flex-basis: 100%;
 }
 
-#program-services .services-grid {
-    flex-direction: column;
-}
+    /*******************************************
+    /* SERVICES PAGE
+    /*******************************************/
 
-#program-services .service {
-    padding-left: 4rem;
-    padding-right: 4rem;
-}
+    #program-services .services-grid {
+        flex-direction: column;
+    }
 
-#program-main {
-    margin-top: 8rem;
-}
+    #program-services .service {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 
-#program-main h1 {
-    font-size: 4rem;
-    font-weight: 900;
-}
+    #program-main {
+        margin-top: 8rem;
+    }
+
+    #program-main h1 {
+        font-size: 4rem;
+        font-weight: 900;
+    }
+
+    #program-services .service:last-of-type {
+        margin-bottom: 8rem;
+    }
 
 /*******************************************
 /* TESTIMONIALS
@@ -609,15 +617,10 @@ main {
 }
 
 .testimonial:hover {
-    /* homepage */
     -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
     -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
     border: 2px solid #EE87A0;
-
-    /* testimonial page */
-    /* box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-    transform: scale(1.01); */
 }
 
 .testimonial-title {
@@ -646,6 +649,52 @@ main {
     font-weight: bold;
     text-decoration: none;
 }
+
+    /*******************************************
+    /* TESTIMONIALS PAGE
+    /*******************************************/
+    #testimonials-page-wrapper main {
+        margin-top: 8rem;
+    }
+
+    #testimonials-page-wrapper #success > p:last-of-type {
+        margin-bottom: 3.5rem;
+    }
+
+        @media screen and (max-width: 770px) {
+            #testimonials-page-wrapper main {
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+    #testimonials-page-wrapper #success h1 {
+        font-size: 4rem;
+        font-weight: 900;
+    }
+
+    #testimonials-page-wrapper .testimonial-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px 10px;
+    }
+
+        @media screen and (max-width: 770px) {
+            #testimonials-page-wrapper .testimonial-wrapper {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+    #testimonials-page-wrapper .testimonial h2,
+    #testimonials-page-wrapper .testimonial {
+        text-align: center;
+    }
+
+    #testimonials-page-wrapper .testimonial:last-of-type {
+        margin-bottom: 8rem;
+        grid-column: 1 / 3;
+    }
 
 /*******************************************
 /* FOOTER
@@ -920,3 +969,48 @@ textarea {
     color: var(--color-main);
     background: var(--color-main-light);
 }
+
+    /*******************************************
+    /* CONSULTATION PAGE
+    /*******************************************/
+    #consult-wrapper {
+        margin: 10rem 0 12rem 0;
+    }
+
+    #consult-wrapper form {
+        font-size: 1.35rem;
+    }
+
+    #consult-wrapper .section-consultation {
+        border-radius: 10px;
+        background: var(--color-main-light);
+        padding: 8rem 5rem 8rem 5rem;
+    }
+
+    #consult-wrapper .section-consultation > p {
+        text-align: center;
+        padding: 0 5rem;
+    }
+
+    #consult-wrapper .section-consultation > p:last-of-type {
+        margin-bottom: 8rem;
+    }
+
+    #consult-wrapper input[type="text"],
+    #consult-wrapper input[type="email"],
+    #consult-wrapper input[type="tel"],
+    #consult-wrapper select,
+    #consult-wrapper textarea {
+        background: rgba(233, 236, 239, 0.579);
+        border: solid 1.75px var(--color-main);
+    }
+
+    #consult-wrapper input[type="text"]:focus,
+    #consult-wrapper input[type="password"]:focus,
+    #consult-wrapper input[type="email"]:focus,
+    #consult-wrapper input[type="tel"]:focus,
+    #consult-wrapper select:focus,
+    #consult-wrapper textarea:focus {
+        border-color: var(--color-main-dark);
+        box-shadow: 0 0 0 1px #ffffff;
+    }

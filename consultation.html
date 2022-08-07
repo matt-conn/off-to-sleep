@@ -66,43 +66,45 @@
             </div>
         </header>
 
-        <main>
-            <section class="section section-consultation">
-                <form action="contact-consultation" method="POST" netlify>
+        <div id="consult-wrapper">
+            <main>
+                <section class="section section-consultation">
                     <h1>Free <em>Off to Sleep</em> Consultation</h1>
 
                     <p>This will be a great area for keywords that are associated with your field! This will help with Google search, SEO, etc...</p>
 
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod alias sint harum repellendus magni maiores nostrum suscipit aut consectetur dolores vero commodi temporibus</p>
+                    
+                    <form action="contact-consultation" method="POST" netlify>
+                        <div class="fields">
+                            <div class="field full">
+                                <label for="name">Name (required)</label>
+                                <input type="text" name="name" id="name" placeholder="Name" required>
+                            </div>
 
-                    <div class="fields">
-                        <div class="field full">
-                            <label for="name">Name (required)</label>
-                            <input type="text" name="name" id="name" placeholder="Name" required>
+                            <div class="field half">
+                                <label for="email">Email (required)</label>
+                                <input type="text" name="email" id="email" placeholder="Email" required>
+                            </div>
+
+                            <div class="field half">
+                                <label for="phone">Phone</label>
+                                <input type="text" name="phone" id="phone" placeholder="xxx-xxx-xxxx">
+                            </div>
+
+                            <div class="field">
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" rows="5" placeholder="Your message here."></textarea>
+                            </div>
                         </div>
 
-                        <div class="field half">
-                            <label for="email">Email (required)</label>
-                            <input type="text" name="email" id="email" placeholder="Email" required>
+                        <div class="actions">
+                            <input type="submit" class="btn submit-btn" value="Send Message">
                         </div>
-
-                        <div class="field half">
-                            <label for="phone">Phone</label>
-                            <input type="text" name="phone" id="phone" placeholder="xxx-xxx-xxxx">
-                        </div>
-
-                        <div class="field">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" rows="5" placeholder="Your message here."></textarea>
-                        </div>
-                    </div>
-
-                    <div class="actions">
-                        <input type="submit" class="btn submit-btn" value="Send Message">
-                    </div>
-                </form>
-            </section>
-        </main>
+                    </form>
+                </section>
+            </main>
+        </div>
 
         <footer id="footer">
             <div class="wrapper footer-wrapper">
