@@ -305,6 +305,10 @@ main {
             flex-direction: column;
         }
 
+        .section-hero-start img {
+            min-width: 90%;
+        }
+
         .section-hero-start p {
             padding-top: 2rem;
         }
