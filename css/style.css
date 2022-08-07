@@ -1006,3 +1006,17 @@ textarea {
         border-color: var(--color-main-dark);
         box-shadow: 0 0 0 1px #ffffff;
     }
+
+    @media screen and (max-width: 480px) {
+        #consult-wrapper {
+            margin: 5rem 0 8rem 0;
+        }
+
+        #consult-wrapper .section-consultation > p {
+            padding: 0 1rem;
+        }
+
+        #consult-wrapper .section-consultation > p:last-of-type {
+            margin-bottom: 5rem;
+        }
+    }
