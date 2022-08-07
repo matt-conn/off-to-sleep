@@ -27,18 +27,6 @@
 }
 
 /*******************************************
-/* FONTS
-/*******************************************/
-@font-face {
-    font-family: 'Chelsy';
-    src: url('../fonts/chelsy/Chelsy.eot');
-    src: url('../fonts/chelsy/Chelsy.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/chelsy/Chelsy.woff2') format('woff2'),
-         url('../fonts/chelsy/Chelsy.woff') format('woff'),
-         url('../fonts/chelsy/Chelsy.ttf')  format('truetype');
-}
-
-/*******************************************
 /* BASE STYLES
 /*******************************************/
 html {
